@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteGray">
+
+    <TextView
+            android:text="@string/depart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartTitle"
+            android:textSize="@dimen/title_textSize"
+            android:textColor="@color/colorRed"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            tools:text="16 SEP 2019"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartDate"
+            android:textSize="@dimen/date_textSize"
+            android:layout_marginEnd="@dimen/layout_marginEnd"
+            android:textColor="@color/colorDarkerGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvDepartTitle"/>
+
+    <TextView
+            android:text="@string/free_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartFreeSeatsLabel"
+            android:textSize="@dimen/freeSeats_textSize"
+            android:textColor="@color/colorDarkerGray"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="@+id/tvDepartTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartTitle"/>
+
+    <TextView
+            tools:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartFreeSeats"
+            android:textSize="@dimen/freeSeats_textSize"
+            android:layout_marginStart="@dimen/freeSeats_marginStart"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartFreeSeatsLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvDepartFreeSeatsLabel"/>
+
+    <TextView
+            tools:text="435 BYN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartCost"
+            android:textStyle="bold"
+            android:textSize="@dimen/cost_textSize"
+            android:textColor="@color/colorTheDarkestGray"
+            app:layout_constraintEnd_toEndOf="@+id/tvDepartDate"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartFreeSeatsLabel"/>
+
+    <TextView
+            tools:text="MSQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartPlaceFrom"
+            android:textSize="@dimen/place_textSize"
+            android:textColor="@color/colorGreen"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartFreeSeatsLabel"
+            android:layout_marginEnd="@dimen/layout_marginEnd"
+            app:layout_constraintEnd_toStartOf="@+id/ivDepartPlane"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            app:srcCompat="@drawable/ic_flight_24dp"
+            android:id="@+id/ivDepartPlane"
+            android:contentDescription="@string/image_of_plane"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartPlaceFrom"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartPlaceFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            tools:text="FLO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartPlaceTo"
+            android:textSize="@dimen/place_textSize"
+            android:textColor="@color/colorGreen"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartPlaceFrom"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartPlaceFrom"
+            app:layout_constraintStart_toEndOf="@+id/ivDepartPlane"
+            android:layout_marginStart="@dimen/layout_marginStart"/>
+
+    <TextView
+            tools:text="00:20"
+            android:textSize="@dimen/time_textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartLeaveTime"
+            android:textColor="@color/colorTheDarkestGray"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="@+id/tvDepartTitle"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartPlaceFrom"/>
+
+    <TextView
+            tools:text="09:20"
+            android:textSize="@dimen/time_textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartArriveTime"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartArrowToRight"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartArrowToRight"
+            app:layout_constraintStart_toEndOf="@+id/tvDepartArrowToRight"
+            android:layout_marginStart="@dimen/arrow_margin"
+            android:textColor="@color/colorTheDarkestGray"/>
+
+    <TextView
+            tools:text="9:00"
+            android:textSize="@dimen/totalTime_textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartTotalTime"
+            android:textColor="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="@+id/tvDepartDate"
+            app:layout_constraintTop_toTopOf="@+id/ivDepartClock"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDepartClock"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDepartFlightDown"
+            android:contentDescription="@string/image_of_landing_plane"
+            android:layout_marginStart="@dimen/time_margin"
+            app:srcCompat="@drawable/ic_flight_land_24dp"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartArriveTime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartArriveTime"
+            app:layout_constraintStart_toEndOf="@+id/tvDepartArriveTime"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDepartFlightUp"
+            android:contentDescription="@string/image_of_departing_plane"
+            app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+            android:layout_marginStart="@dimen/time_margin"
+            app:layout_constraintStart_toEndOf="@+id/tvDepartLeaveTime"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartLeaveTime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartLeaveTime"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartArrowToRight"
+            android:layout_marginStart="@dimen/arrow_margin"
+            android:contentDescription="@string/arrow_to_right"
+            app:srcCompat="@drawable/ic_trending_flat_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDepartFlightUp"
+            app:layout_constraintTop_toTopOf="@+id/ivDepartFlightUp"
+            app:layout_constraintStart_toEndOf="@+id/ivDepartFlightUp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/time_margin"
+            android:id="@+id/ivDepartClock"
+            android:contentDescription="@string/image_of_clock"
+            app:srcCompat="@drawable/ic_access_time_black_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvDepartTotalTime"
+            app:layout_constraintTop_toTopOf="@+id/ivDepartFlightDown"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDepartFlightDown"/>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/vSeparator"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/layoutSeparator_margin"
+            android:layout_marginStart="@dimen/layoutSeparator_margin"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartLeaveTime"/>
+
+    <TextView
+            android:text="@string/return_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturn"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/title_textSize"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparator"/>
+
+    <TextView
+            tools:text="17 SEP 2019"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnDate"
+            android:layout_marginEnd="@dimen/layout_marginEnd"
+            android:textSize="@dimen/date_textSize"
+            android:textColor="@color/colorDarkerGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvReturn"/>
+
+    <TextView
+            android:text="@string/free_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnFreeSeatsLabel"
+            android:textSize="@dimen/freeSeats_textSize"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="@+id/tvReturn"
+            app:layout_constraintTop_toBottomOf="@+id/tvReturn"/>
+
+    <TextView
+            tools:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnFreeSeats"
+            android:textSize="@dimen/freeSeats_textSize"
+            android:layout_marginStart="@dimen/freeSeats_marginStart"
+            app:layout_constraintTop_toTopOf="@+id/tvReturnFreeSeatsLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReturnFreeSeatsLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvReturnFreeSeatsLabel"/>
+
+    <TextView
+            tools:text="488 BYN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnCost"
+            android:textSize="@dimen/cost_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/colorTheDarkestGray"
+            app:layout_constraintEnd_toEndOf="@+id/tvReturnDate"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReturnFreeSeatsLabel"/>
+
+    <TextView
+            tools:text="FLO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnPlaceFrom"
+            android:textSize="@dimen/place_textSize"
+            android:textColor="@color/colorGreen"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintEnd_toStartOf="@+id/ivReturnPlane"
+            app:layout_constraintTop_toBottomOf="@+id/tvReturnFreeSeatsLabel"
+            android:layout_marginEnd="@dimen/layout_marginEnd"/>
+
+    <TextView
+            tools:text="MSQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnPlaceTo"
+            android:textSize="@dimen/place_textSize"
+            android:textColor="@color/colorGreen"
+            app:layout_constraintStart_toEndOf="@+id/ivReturnPlane"
+            app:layout_constraintTop_toTopOf="@+id/ivReturnPlane"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReturnPlane"
+            android:layout_marginStart="@dimen/layout_marginStart"/>
+
+    <TextView
+            tools:text="05:10"
+            android:textSize="@dimen/time_textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnLeaveTime"
+            android:textColor="@color/colorTheDarkestGray"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            app:layout_constraintStart_toStartOf="@+id/tvReturn"
+            app:layout_constraintTop_toBottomOf="@+id/tvReturnPlaceFrom"/>
+
+    <TextView
+            tools:text="09:20"
+            android:textSize="@dimen/time_textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnArriveTime"
+            android:layout_marginStart="@dimen/arrow_margin"
+            android:textColor="@color/colorTheDarkestGray"
+            app:layout_constraintTop_toTopOf="@+id/ivReturnArrowToRight"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReturnArrowToRight"
+            app:layout_constraintStart_toEndOf="@+id/ivReturnArrowToRight"/>
+
+    <TextView
+            tools:text="4:10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReturnTotalTime"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/totalTime_textSize"
+            app:layout_constraintEnd_toEndOf="@+id/tvReturnDate"
+            app:layout_constraintTop_toTopOf="@+id/ivReturnClock"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReturnClock"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            app:srcCompat="@drawable/ic_flight_24dp"
+            android:id="@+id/ivReturnPlane"
+            android:contentDescription="@string/image_of_plane"
+            app:layout_constraintTop_toTopOf="@+id/tvReturnPlaceFrom"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReturnPlaceFrom"
+            app:layout_constraintStart_toEndOf="@+id/tvReturnPlaceFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivReturnFlightUp"
+            android:contentDescription="@string/image_of_departing_plane"
+            android:layout_marginStart="@dimen/time_margin"
+            app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/tvReturnLeaveTime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReturnLeaveTime"
+            app:layout_constraintTop_toTopOf="@+id/tvReturnLeaveTime"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/arrow_margin"
+            android:id="@+id/ivReturnArrowToRight"
+            android:contentDescription="@string/arrow_to_right"
+            app:srcCompat="@drawable/ic_trending_flat_black_24dp"
+            app:layout_constraintTop_toTopOf="@+id/ivReturnFlightUp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReturnFlightUp"
+            app:layout_constraintStart_toEndOf="@+id/ivReturnFlightUp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivReturnFlightDown"
+            android:layout_marginStart="@dimen/time_margin"
+            android:contentDescription="@string/image_of_landing_plane"
+            app:layout_constraintStart_toEndOf="@+id/tvReturnArriveTime"
+            app:srcCompat="@drawable/ic_flight_land_24dp"
+            app:layout_constraintTop_toTopOf="@+id/tvReturnArriveTime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReturnArriveTime"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivReturnClock"
+            android:layout_marginEnd="@dimen/time_margin"
+            android:contentDescription="@string/image_of_clock"
+            app:layout_constraintEnd_toStartOf="@+id/tvReturnTotalTime"
+            app:srcCompat="@drawable/ic_access_time_black_24dp"
+            app:layout_constraintTop_toTopOf="@+id/ivReturnFlightDown"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReturnFlightDown"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:id="@+id/floatingActionButton"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/large_margin"
+            app:srcCompat="@drawable/ic_check_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparator2"
+            app:backgroundTint="@color/colorGreen"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/vSeparator2"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:layout_marginEnd="@dimen/layoutSeparator_margin"
+            android:layout_marginStart="@dimen/layoutSeparator_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/tvReturnLeaveTime"/>
+
+</android.support.constraint.ConstraintLayout>

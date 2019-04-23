@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LayoutsTask</string>
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="depart">DEPART</string>
+    <string name="return_text">RETURN</string>
+    <string name="free_seats">Free seats:</string>
+    <string name="image_of_plane">Image of plane</string>
+    <string name="image_of_landing_plane">Image of landing plane</string>
+    <string name="image_of_clock">Image of clock</string>
+    <string name="image_of_departing_plane">Image of departing plane</string>
+    <string name="arrow_to_right">Arrow to right</string>
+</resources>
