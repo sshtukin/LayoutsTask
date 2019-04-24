@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <LinearLayout
             android:orientation="vertical"
@@ -20,7 +20,7 @@
 
             <TextView
                     android:text="@string/depart"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvDepartTitle"
                     android:textSize="@dimen/title_textSize"
@@ -58,7 +58,7 @@
 
             <TextView
                     tools:text="3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvDepartFreeSeats"
                     android:layout_marginStart="@dimen/freeSeats_marginStart"
@@ -172,7 +172,7 @@
                     app:srcCompat="@drawable/ic_flight_land_24dp"/>
 
             <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitEnd"
@@ -220,7 +220,7 @@
 
             <TextView
                     android:text="@string/return_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvReturn"
                     android:textSize="@dimen/title_textSize"
@@ -258,7 +258,7 @@
 
             <TextView
                     tools:text="5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvReturnFreeSeats"
                     android:layout_marginStart="@dimen/freeSeats_marginStart"
@@ -282,7 +282,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-        android:layout_gravity="center">
+                android:layout_gravity="center">
 
             <TextView
                     tools:text="FLO"
@@ -373,7 +373,7 @@
                     android:contentDescription="@string/image_of_landing_plane"/>
 
             <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitEnd"

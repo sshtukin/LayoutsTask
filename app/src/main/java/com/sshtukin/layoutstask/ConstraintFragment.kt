@@ -47,8 +47,8 @@ class ConstraintFragment : Fragment(){
     }
 
     companion object {
-        private val FLIGHTINFO_DEPART_KEY = "1001"
-        private val FLIGHTINFO_RETURN_KEY = "1002"
+        private const val FLIGHTINFO_DEPART_KEY = "1001"
+        private const val FLIGHTINFO_RETURN_KEY = "1002"
 
         fun newInstance(departFlightInfo :FlightInfo, returnFlightInfo: FlightInfo) = ConstraintFragment().apply {
             arguments = Bundle().apply {
