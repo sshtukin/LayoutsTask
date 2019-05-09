@@ -1,7 +1,11 @@
 package com.sshtukin.layoutstask
 
+import android.app.Application
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatDelegate
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +18,18 @@ import kotlinx.android.synthetic.main.fragment_constraint.*
  */
 
 class ConstraintFragment : Fragment(){
+
+    private lateinit var listener: FABListener
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        if (context is FABListener){
+            listener = context
+        }
+        else {
+            throw RuntimeException()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +59,13 @@ class ConstraintFragment : Fragment(){
             tvReturnLeaveTime.text = it.departTime
             tvReturnArriveTime.text = it.arriveTime
             tvReturnTotalTime.text = it.totalTime
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        floatingActionButton.setOnClickListener {
+            listener.onFABClicked()
         }
     }
 

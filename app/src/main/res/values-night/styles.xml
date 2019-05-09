@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">@color/colorDark</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonColor">@color/colorPurple</item>
+        <item name="backgroundColor" >@color/colorDark</item>
+        <item name="departColor">@color/colorYellow</item>
+        <item name="returnColor">@color/colorTurquoise</item>
+        <item name="planesImages">@color/colorOrange</item>
+        <item name="placesColor">@color/colorWhite</item>
+    </style>
+
+</resources>

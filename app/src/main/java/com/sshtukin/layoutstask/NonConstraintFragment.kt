@@ -1,11 +1,28 @@
 package com.sshtukin.layoutstask
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_constraint.*
 import kotlinx.android.synthetic.main.fragment_non_constraint.*
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartArriveTime
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartCost
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartDate
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartFreeSeats
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartPlaceFrom
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartPlaceTo
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvDepartTotalTime
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnArriveTime
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnCost
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnDate
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnFreeSeats
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnLeaveTime
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnPlaceFrom
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnPlaceTo
+import kotlinx.android.synthetic.main.fragment_non_constraint.tvReturnTotalTime
 
 /**
  * Fragment which showing FlightInfo, based on LinearLayouts
@@ -14,6 +31,18 @@ import kotlinx.android.synthetic.main.fragment_non_constraint.*
  */
 
 class NonConstraintFragment : Fragment(){
+
+    private lateinit var listener: FABListener
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        if (context is FABListener){
+            listener = context
+        }
+        else {
+            throw RuntimeException()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +72,14 @@ class NonConstraintFragment : Fragment(){
                 tvReturnLeaveTime.text = it.departTime
                 tvReturnArriveTime.text = it.arriveTime
                 tvReturnTotalTime.text = it.totalTime
+        }
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        floatingActionButton.setOnClickListener {
+            listener.onFABClicked()
         }
     }
 

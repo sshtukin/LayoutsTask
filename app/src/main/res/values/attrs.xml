@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="buttonColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="departColor" format="color"/>
+        <attr name="returnColor" format="color"/>
+        <attr name="planesImages" format="color"/>
+        <attr name="placesColor" format="color"/>
+    </declare-styleable>
+</resources>

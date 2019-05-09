@@ -1,11 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonColor">@color/colorGreen</item>
+        <item name="backgroundColor">@color/colorWhiteGray</item>
+        <item name="departColor">@color/colorRed</item>
+        <item name="returnColor">@color/colorBlue</item>
+        <item name="planesImages">@color/colorDarkerBlue</item>
+        <item name="placesColor">@color/colorGreen</item>
     </style>
 
 </resources>

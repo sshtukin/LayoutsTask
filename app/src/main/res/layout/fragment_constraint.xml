@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhiteGray">
+  >
 
     <TextView
             android:text="@string/depart"
@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvDepartTitle"
             android:textSize="@dimen/title_textSize"
-            android:textColor="@color/colorRed"
+            android:textColor="?attr/departColor"
             android:textStyle="bold"
             android:layout_marginStart="@dimen/layout_marginStart"
             android:layout_marginTop="@dimen/layout_marginTop"
@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvDepartFreeSeats"
             android:textSize="@dimen/freeSeats_textSize"
+            android:textColor="@color/colorDarkerGray"
             android:layout_marginStart="@dimen/freeSeats_marginStart"
             app:layout_constraintBottom_toBottomOf="@+id/tvDepartFreeSeatsLabel"
             app:layout_constraintStart_toEndOf="@+id/tvDepartFreeSeatsLabel"/>
@@ -69,7 +70,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvDepartPlaceFrom"
             android:textSize="@dimen/place_textSize"
-            android:textColor="@color/colorGreen"
+            android:textColor="?attr/placesColor"
             android:layout_marginTop="@dimen/layout_marginTop"
             app:layout_constraintTop_toBottomOf="@+id/tvDepartFreeSeatsLabel"
             android:layout_marginEnd="@dimen/layout_marginEnd"
@@ -93,7 +94,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvDepartPlaceTo"
             android:textSize="@dimen/place_textSize"
-            android:textColor="@color/colorGreen"
+            android:textColor="?attr/placesColor"
             app:layout_constraintTop_toTopOf="@+id/tvDepartPlaceFrom"
             app:layout_constraintBottom_toBottomOf="@+id/tvDepartPlaceFrom"
             app:layout_constraintStart_toEndOf="@+id/ivDepartPlane"
@@ -150,7 +151,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ivDepartFlightUp"
             android:contentDescription="@string/image_of_departing_plane"
-            app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+            app:srcCompat="@drawable/ic_flight_takeoff_24dp"
             android:layout_marginStart="@dimen/time_margin"
             app:layout_constraintStart_toEndOf="@+id/tvDepartLeaveTime"
             app:layout_constraintTop_toTopOf="@+id/tvDepartLeaveTime"
@@ -199,7 +200,7 @@
             android:id="@+id/tvReturn"
             android:layout_marginStart="@dimen/layout_marginStart"
             android:textStyle="bold"
-            android:textColor="@color/colorBlue"
+            android:textColor="?attr/returnColor"
             android:textSize="@dimen/title_textSize"
             android:layout_marginTop="@dimen/layout_marginTop"
             app:layout_constraintStart_toStartOf="parent"
@@ -221,6 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvReturnFreeSeatsLabel"
+            android:textColor="@color/colorDarkerGray"
             android:textSize="@dimen/freeSeats_textSize"
             android:layout_marginTop="@dimen/layout_marginTop"
             app:layout_constraintStart_toStartOf="@+id/tvReturn"
@@ -231,6 +233,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvReturnFreeSeats"
+            android:textColor="@color/colorDarkerGray"
             android:textSize="@dimen/freeSeats_textSize"
             android:layout_marginStart="@dimen/freeSeats_marginStart"
             app:layout_constraintTop_toTopOf="@+id/tvReturnFreeSeatsLabel"
@@ -254,7 +257,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvReturnPlaceFrom"
             android:textSize="@dimen/place_textSize"
-            android:textColor="@color/colorGreen"
+            android:textColor="?attr/placesColor"
             android:layout_marginTop="@dimen/layout_marginTop"
             app:layout_constraintEnd_toStartOf="@+id/ivReturnPlane"
             app:layout_constraintTop_toBottomOf="@+id/tvReturnFreeSeatsLabel"
@@ -266,7 +269,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvReturnPlaceTo"
             android:textSize="@dimen/place_textSize"
-            android:textColor="@color/colorGreen"
+            android:textColor="?attr/placesColor"
             app:layout_constraintStart_toEndOf="@+id/ivReturnPlane"
             app:layout_constraintTop_toTopOf="@+id/ivReturnPlane"
             app:layout_constraintBottom_toBottomOf="@+id/ivReturnPlane"
@@ -325,7 +328,7 @@
             android:id="@+id/ivReturnFlightUp"
             android:contentDescription="@string/image_of_departing_plane"
             android:layout_marginStart="@dimen/time_margin"
-            app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+            app:srcCompat="@drawable/ic_flight_takeoff_24dp"
             app:layout_constraintStart_toEndOf="@+id/tvReturnLeaveTime"
             app:layout_constraintBottom_toBottomOf="@+id/tvReturnLeaveTime"
             app:layout_constraintTop_toTopOf="@+id/tvReturnLeaveTime"/>
@@ -375,7 +378,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vSeparator2"
-            app:backgroundTint="@color/colorGreen"
+            app:backgroundTint="?attr/buttonColor"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     <View
